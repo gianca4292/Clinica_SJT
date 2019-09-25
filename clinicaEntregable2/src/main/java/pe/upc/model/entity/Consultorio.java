@@ -1,4 +1,3 @@
-
 package pe.upc.model.entity;
 
 import javax.persistence.Column;
@@ -14,19 +13,18 @@ public class Consultorio {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long idConsultorio;
+	private Integer idConsultorio;
 	
-	
-	
-	@Column(name="nombre_Consultorio", nullable=false)
+	@Column(name="nombre_Consultorio", nullable=false, length = 50)
 	private String nameConsultorio;
 	
 	
-	public Long getIdConsultorio() {
+	
+	public Integer getIdConsultorio() {
 		return idConsultorio;
 	}
 
-	public void setIdConsultorio(Long idConsultorio) {
+	public void setIdConsultorio(Integer idConsultorio) {
 		this.idConsultorio = idConsultorio;
 	}
 
